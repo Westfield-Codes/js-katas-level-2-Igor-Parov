@@ -14,7 +14,7 @@
 
 /* Var Alert Prompt Conditional */
 // make a string variable for color, prompt the user for their favorite
-// if user enters "black" alert "Black is not really a color." 
+// if user enters "black"123 alert "Black is not really a color." 
 // otherwise alert color " is a nice color!"
 
 /* AGE KATAS */
