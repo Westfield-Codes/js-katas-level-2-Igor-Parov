@@ -11,7 +11,7 @@
 /* Var Alert Prompt */
 // make a string variable for color, prompt the user for their favorite color.
 // alert color " plus is a nice color!"
-
+667
 /* Var Alert Prompt Conditional */
 // make a string variable for color, prompt the user for their favorite
 // if user enters "black"123 alert "Black is not really a color." 
