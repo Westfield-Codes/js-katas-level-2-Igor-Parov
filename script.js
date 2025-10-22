@@ -1,39 +1,72 @@
+/* RANDOM STUDENT KATA:  */
+
+// Who will be gatekeeper and keymaster today?
+
+/* Global Variables */
+// Create an array called students, start empty. 
+// Create an array called picked, start empty. 
+var students =[]
+var picked = []
 function main(){
-let age = prompt("How old are you?")
-let born = prompt("What year were you born?")
-if (myAge(age)!==born)alert("Underaged")
-else alert("Welcome!")
+let count = prompt("How many students are there? ")
+addStudents(count);
+let gateKeeper = randStudent(count)
+let keymaster = randNewStudent();
+alert("The gate keeper = " + gateKeeper + " and the keymaster " + keymaster)
 }
-/* FUNCTION main() 
- * Facebook wants to check if you're 13, so they ask your birth year 
- * set age = "How old are you?"
- * then set born = asking "What year were you born?"
- * If myAge(age) is not equal to born, say, "Underaged", otherwise "Welcome!"
- * @param: none (main never gets params)
- * @return: none (main never gets returns
+/* Function Main()
+ * Set variable called count to asking how many students there are.
+ * Fill global array students by passing count as an argument to addStudents
+ * Set gateKeeper = randStudent(count), the name of a random student in the list
+ * Set keymaster = randNewStudent(), name of a different random student
+ * Display gatekeeper name and keymaster name for this kata
+ * @param = none
+ * @return = none
  */
-function myAge(age){
-let thisYear = const d = new Date();
-d.getFullYear();
-let birthYear=thisYear-age;
-return birthYear;
 
+function addStudents(count){
+
+students.push("Ven");
+students.push("Igor");
+students.push("Megan");
 
 }
-
-/* FUNCTION myAge(age)
- * define a function called myAge with number parameter age
- * Get thisYear using the date function https://www.w3schools.com/js/js_date_methods.asp
- * set birthYear as thisYear minus age and return that
- * @param: age (integer)
- * @return: birthYear (year)
+/* Function addStudents(count) 
+ * Use a for loop to add student names to the students array via user input.
+ * The loop should run count number of times. 
+ * @param = count {integer}
+ * @return = none
  */
 
-/* NOTE TO PROGRAMMERS: myAge(age) only works if you have not had your birthday.  
- * An additional checkAlready(birthYear) checks for that and makes an adjustment. 
- * To use it, add birthYear = checkAlready(birthYear); before you return the value.
- * function checkAlready(birthYear) asks if you had your birthday already this year.  
- * If you have, it adds 1 to your birthYear and returns that.
+function randNewStudent(count){
+
+return students[2]
+
+}
+function randStudent(count){
+    return students[1]
+}
+/* Function randStudent(count)
+ * Set student = random number, 0 to length of students array.
+ * Set name = element in students array at that random index.
+ * Add name to picked array. 
+ * Return the name of the random student
+ * @param = count {integer}
+ * @return = name {string}
  */
 
+/* Function randNewStudent() (start with copy of randStudent)
+ * Set name = "", student = 0 and pickedYet = 0. 
+ * Loop while pickedYet is not equal to -1
+ * Set student = random number, 0 to length of students array.
+ * Set name = element in students array at that random index.
+ * Set pickedYet = the index of that name the picked array. 
+ * End the while loop.
+ * Add name to picked array.
+ * Return the name of the new random student
+ * @param = none
+ * @return = name {string}
+ */
+
+ 
 /* ************************************* */
