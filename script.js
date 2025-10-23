@@ -5,12 +5,13 @@
 /* Global Variables */
 // Create an array called students, start empty. 
 // Create an array called picked, start empty. 
-var students =[]
-var picked = []
+var students = [];
+var picked = [];
+
 function main(){
-let count = prompt("How many students are there? ")
-addStudents(count);
-let gateKeeper = randStudent(count)
+let count = prompt("How many students?")
+addStudents(count)
+let gateKeeper = randStudent()
 let keymaster = randNewStudent();
 alert("The gate keeper = " + gateKeeper + " and the keymaster " + keymaster)
 }
@@ -25,10 +26,9 @@ alert("The gate keeper = " + gateKeeper + " and the keymaster " + keymaster)
  */
 
 function addStudents(count){
-
-students.push("Ven");
-students.push("Igor");
-students.push("Megan");
+for(let student=1;student<=count;student++ ){
+  students.push(prompt ("Next Student?")) 
+}
 
 }
 /* Function addStudents(count) 
@@ -38,14 +38,7 @@ students.push("Megan");
  * @return = none
  */
 
-function randNewStudent(count){
 
-return students[2]
-
-}
-function randStudent(count){
-    return students[1]
-}
 /* Function randStudent(count)
  * Set student = random number, 0 to length of students array.
  * Set name = element in students array at that random index.
@@ -70,3 +63,4 @@ function randStudent(count){
 
  
 /* ************************************* */
+
