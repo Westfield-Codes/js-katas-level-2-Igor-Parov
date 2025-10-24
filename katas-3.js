@@ -61,7 +61,13 @@
 // Every day, you are sent to buy 5 items. 
 
 /* 1. for loop and string concatenation */
-
+function makeList(){
+    let shoppingList = "To Buy: "
+    for(let item=0;item>=5;item++){
+        shoppingList+=prompt("Item #" + item)+"/n"
+    }
+    alert(shoppingList)
+}
 /* Function makeList()
  * Create a shopping list string called shoppingList as "To Buy:"
  * create a five-item loop, and in the loop, 
