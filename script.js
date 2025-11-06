@@ -1,4 +1,4 @@
-/* SHOPPING LIST KATA:  */
+  /* SHOPPING LIST KATA:  */
 
 // Every day, you are sent to buy 5 items. 
 
@@ -55,12 +55,20 @@ function makeList2(){
      itemPrice=[];
     for(let item=0;item<=5;item++){
         shopArray.push(prompt("Item #" + item)) 
-        itemPrice.push(prompt("Enter a price, separated by comma"))
+        
     }
     alert(shoppingList+shopArray.join("\n"))
 }
 /* 4. 2D Arrays: add Pricing */
-
+function makeList4(){
+    let shoppingList = "To Buy: \n"
+     shopArray=[itemPrice=[]];
+    for(let item=0;item<=5;item++){
+        shopArray.push(prompt("Item #" + item)) 
+        itemPrice.push(prompt("Enter a price, separated by comma"))
+    }
+    alert(shoppingList+shopArray.join+itemPrice.join("\n"))
+}
 /* Same function, using previous code, but THIS TIME add prices
  * When someone enters an item, prompt them also to enter a price separating by comma (like milk, 1.99)])   
  * Convert that entry to an itemPrice array by using string.split() and use a comma as delimiter
