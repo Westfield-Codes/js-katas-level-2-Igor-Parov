@@ -177,6 +177,8 @@ alert("The gate keeper = " + gateKeeper + " and the keymaster " + keymaster)
                                     /* ************************************* */
                                     /* SHOPPING LIST KATA:  */
 
+  /* SHOPPING LIST KATA:  */
+
 // Every day, you are sent to buy 5 items. 
 
 /* 1. for loop and string concatenation */
@@ -232,12 +234,23 @@ function makeList2(){
      itemPrice=[];
     for(let item=0;item<=5;item++){
         shopArray.push(prompt("Item #" + item)) 
-        itemPrice.push(prompt("Enter a price, separated by comma"))
+        
     }
     alert(shoppingList+shopArray.join("\n"))
 }
 /* 4. 2D Arrays: add Pricing */
-
+function makeList4(){
+    let shoppingList = "To Buy: \n"
+     shopArray=[];
+     itemPrice=[];
+     let pair = "";
+    for(let item=0;item<5;item++){
+        pair = prompt("Item #" + item + " : item, price")
+        itemPrice = pair.split(",")
+        shopArray.push(itemPrice)
+    }
+    alert(shoppingList+shopArray.join("\n"))
+}
 /* Same function, using previous code, but THIS TIME add prices
  * When someone enters an item, prompt them also to enter a price separating by comma (like milk, 1.99)])   
  * Convert that entry to an itemPrice array by using string.split() and use a comma as delimiter
@@ -252,3 +265,22 @@ function makeList2(){
  * Save the first alert content as message. 
  * Add total as a line below message, then alert the message. 
  */
+function makeList5(){
+    let shoppingList = "To Buy: \n"
+     shopArray=[];
+     itemPrice=[];
+     let pair = "";
+    for(let item=1;item<6;item++){
+        pair = prompt("Item #" + item + " : item, price")
+        itemPrice = pair.split(",")
+        shopArray.push(itemPrice)
+    }
+    let total = 0;
+    for(let price = 0; price < shopArray.length; price++){
+      total += parseInt(shopArray[price][1]);
+
+
+    }
+    alert(shoppingList+shopArray.join("\n"))
+    alert("Your total is : " + total)
+}
